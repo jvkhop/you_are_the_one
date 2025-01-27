@@ -15,8 +15,8 @@ body {
   background: #f20044;
   transform: rotate(-45deg);
   box-shadow: 15px 5px 150px 20px #f20044;
-  -webkit-animation: heart 0.6s linear infinite;
-          animation: heart 0.6s linear infinite;
+  -webkit-animation: heart 1.2s linear infinite;
+          animation: heart 1.2s linear infinite;
 }
 .heart::before {
   content: "";
@@ -47,4 +47,4 @@ body {
   100% {
     scale: 0.8;
   }
-}/*# sourceMappingURL=style.css.map */
+}
