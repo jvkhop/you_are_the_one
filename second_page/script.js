@@ -54,12 +54,14 @@ class Paper {
     };
 
     paper.addEventListener('touchmove', (e) => {
+      e.preventDefault();
+      moveHandler(e.touches[0].clientX, e.touches[0].clientY);
       // grab the location of touch
-      var touchLocation = e.targetTouches[0];
+      // var touchLocation = e.targetTouches[0];
     
-      // assign box new coordinates based on the touch.
-      paper.style.left = touchLocation.pageX + 'px';
-      paper.style.top = touchLocation.pageY + 'px';
+      // // assign box new coordinates based on the touch.
+      // paper.style.left = touchLocation.pageX + 'px';
+      // paper.style.top = touchLocation.pageY + 'px';
     });
 
     paper.addEventListener('touchend', (e) => {
