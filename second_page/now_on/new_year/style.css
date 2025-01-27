@@ -15,8 +15,9 @@ body {
 }
 
 .textCont {
-  font-size: 150%;
   color: white;
+  font-size: 150%;
+
   margin-top: 10%;
   margin-left: 5px;
   margin-right: 5px;
