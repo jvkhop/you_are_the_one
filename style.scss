@@ -1,0 +1,49 @@
+$heart: #f20044;
+$background: #0b1522;
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $background;
+}
+
+.heart {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background: $heart;
+    transform: rotate(-45deg);
+    box-shadow: 15px 5px 150px 20px $heart;
+    animation: heart 0.6s linear infinite;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: $heart;
+        top: -50%;
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: $heart;
+        right: -50%;
+        border-radius: 50%;
+    }
+
+}
+
+@-webkit-keyframes heart {
+    0% { scale: 1.07;}
+    80% { scale: 1;}
+    100% { scale: 0.8;}
+}
