@@ -1,21 +1,23 @@
 let highestZ = 1;
 
 class Paper {
-  holdingPaper = false;
-  touchStartX = 0;
-  touchStartY = 0;
-  touchMoveX = 0;
-  touchMoveY = 0;
-  touchEndX = 0;
-  touchEndY = 0;
-  prevTouchX = 0;
-  prevTouchY = 0;
-  velX = 0;
-  velY = 0;
-  rotation = Math.random() * 30 - 15;
-  currentPaperX = 0;
-  currentPaperY = 0;
-  rotating = false;
+  constructor() {
+    this.holdingPaper = false;
+    this.touchStartX = 0;
+    this.touchStartY = 0;
+    this.touchMoveX = 0;
+    this.touchMoveY = 0;
+    this.touchEndX = 0;
+    this.touchEndY = 0;
+    this.prevTouchX = 0;
+    this.prevTouchY = 0;
+    this.velX = 0;
+    this.velY = 0;
+    this.rotation = Math.random() * 30 - 15;
+    this.currentPaperX = 0;
+    this.currentPaperY = 0;
+    this.rotating = false;
+  }
 
   init(paper) {
     paper.addEventListener('touchmove', (e) => {
@@ -65,6 +67,7 @@ class Paper {
       this.prevTouchX = this.touchStartX;
       this.prevTouchY = this.touchStartY;
     });
+
     paper.addEventListener('touchend', () => {
       this.holdingPaper = false;
       this.rotating = false;
