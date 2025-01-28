@@ -43,12 +43,13 @@
     box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
   }
 
-  @media (max-width: 600px) {
-    img {
-      width: 80%; /* Adjust the width as needed */
-    }
-  
-    .btn a {
-      padding: 8px 16px;
-    }
+@media (max-width: 600px) {
+  img {
+    width: 80% !important; /* Adjust the width as needed */
+    height: auto !important;
   }
+
+  .btn a {
+    padding: 8px 16px;
+  }
+}
